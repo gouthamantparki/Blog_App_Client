@@ -46,7 +46,7 @@ export const UpdatePost = () => {
         }
 
         const jwt = JSON.parse(atob(JSON.stringify(token).split('.')[1]));
-        axios.put(`${baseURL}/posts/${id}`, post, { headers: { 'x-access-token': token } })
+        axios.put(`${baseURL}/posts/${id}`, post, { headers: { 'x-access-token': JSON.parse(token) } })
             .then(res => {
                 alert(res.data.message)
                 navigate('/', { replace: true })
