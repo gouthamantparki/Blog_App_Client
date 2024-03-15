@@ -1,0 +1,11 @@
+.menus {
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+}
+
+.menu :hover {
+    background-color: grey;
+    padding: 2px;
+    border-radius: 10%;
+}
