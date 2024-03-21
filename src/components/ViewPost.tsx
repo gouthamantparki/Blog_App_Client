@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import baseURL from "../api/api";
 

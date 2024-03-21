@@ -14,7 +14,7 @@ export const Posts = () => {
         <div className="container">
             <h2 className="display-6 text-center mt-4">Posts</h2>
             <div className="d-flex justify-content-around align-items-center mt-4">
-                {posts.map((post) => {
+                {posts.map((post: any) => {
                     return (<Post post={post} key={post?._id} />)
                 })}
             </div>

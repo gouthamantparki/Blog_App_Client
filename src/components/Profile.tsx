@@ -11,7 +11,7 @@ export const Profile = () => {
         return;
     }
     const jwt = JSON.parse(atob(JSON.stringify(token).split('.')[1]));
-    const [user, setUser] = useState()
+    const [user, setUser]: any = useState()
 
     useEffect(() => {
         axios.get(`${baseURL}/users/${jwt.id}`).then(res => setUser(res.data.data)).catch(err => alert(err.message))

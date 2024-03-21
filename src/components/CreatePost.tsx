@@ -43,7 +43,11 @@ export const CreatePost = () => {
         }
 
         const jwt = JSON.parse(atob(JSON.stringify(token).split('.')[1]));
-        axios.post(`${baseURL}/posts/${jwt.id}`, post, { headers: { 'x-access-token': token } })
+        axios.post(`${baseURL}/posts/${jwt.id}`, post, {
+            headers: {
+                'x-access-token': JSON.parse(token)
+            }
+        })
             .then(res => {
                 alert(res.data.message)
                 navigate('/', { replace: true })
